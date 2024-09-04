@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device=1.0" />
+    <title>Overlay tool</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"
+    />
+    <link rel="stylesheet" href="overlay.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- North Arrow Container -->
+    <div id="north-arrow-container">
+      <img src="northarrow.svg" alt="North Arrow" id="north-arrow" />
+    </div>
+
+    <!-- Layer Control Toggle -->
+    <div class="layer-toggle">
+      <img src="layericon.png" alt="Toggle Layers" width="20" />
+    </div>
+
+    <!-- Layer Control Panel -->
+    <div class="layer-control">
+      <div class="layer-group">
+        <div class="layer-group-title">- Movements</div>
+        <div class="layer-subgroup-title">Trails</div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="tears" /> Trails of Tears
+        </div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="Oregon" /> Oregon Trails
+        </div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="mormon" /> Mormon Trail
+        </div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="cali-trails" /> California Trails
+        </div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="sante-fe-trail" /> Santa Fe Trail
+        </div>
+      </div>
+      <div class="layer-group">
+        <div class="layer-group-title">- Infrastructure</div>
+        <div class="layer-subgroup-title">Transportation</div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="railroads" /> Railroads
+        </div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="erie-canal" /> Erie Canal
+        </div>
+        <!-- <div class="layer-checkbox">
+          <input type="checkbox" id="great-wagon-road" /> The Great Wagon Road
+        </div> -->
+      </div>
+      <div class="layer-group">
+        <div class="layer-group-title">- Administrative</div>
+        <div class="layer-subgroup-title">Admin</div>
+        <div class="layer-checkbox">
+          <input type="checkbox" id="states" /> States
+        </div>
+        <!-- <div class="layer-checkbox">
+          <input type="checkbox" id="counties" /> Counties
+        </div> -->
+        <div class="layer-checkbox">
+          <input type="checkbox" id="state-labels" /> State Labels
+        </div>
+      </div>
+    </div>
+
+    <!-- Legend Container -->
+    <div id="legend-container" class="legend">
+      <div class="legend-title">Legend</div>
+      <div id="legend-content"></div>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip"></div>
+
+    <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+    <script src="overlay.js"></script>
+  </body>
+</html>
